@@ -30,8 +30,8 @@ bot = commands.Bot(command_prefix="!", intents=intents)
 # Define the constants
 EXCHANGE_RATE = 0.2  # 1M GP = $0.2
 EMOJI_CATEGORY = {
-    "gp": "<:Coins:1306015458344042616> ",  # Replace with your emoji ID for GP
-    "usd": "<:Btc:1240968319889047633>"  # Replace with your emoji ID for USD
+    "gp": "<:Coins:1344508296140161087> ",  # Replace with your emoji ID for GP
+    "usd": "<:Tether_USDT:1344507850914791474>"  # Replace with your emoji ID for USD
 }
 
 # Load quest data from JSON file
