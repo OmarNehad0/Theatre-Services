@@ -115,7 +115,7 @@ async def quest_calculator(ctx, *, quests: str):
         )
 
     # Add a footer as a thumbnail
-    embed.set_image(url="https://media.discordapp.net/attachments/1344265853100621914/1345088759590555779/banner.gif?ex=67c34706&is=67c1f586&hm=de2a45bd00658704c44511739e18aa3ba1c3b7453d1217685af0802321158d1e&=")
+    embed.set_image(url="https://media.discordapp.net/attachments/1344265853100621914/1345117130403610696/banner.gif?ex=67c36172&is=67c20ff2&hm=5d727bb56b2eb2f48b46bc56efc9f0ab185303a870b74e463dd563a73f4c269c&=")
 
     # Send the embed
     await ctx.send(embed=embed)
