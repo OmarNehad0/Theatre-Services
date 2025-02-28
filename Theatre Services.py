@@ -1,22 +1,25 @@
 import discord
-from discord.ext import commands
+from discord.ext import commands, tasks
 import os
 from flask import Flask
 from threading import Thread
-from collections import defaultdict
-import json
-import asyncio
-from discord.ui import View, Select, Button
-from discord.ui import Modal, TextInput
-import time
 import logging
-logging.basicConfig(level=logging.INFO)
-logging.basicConfig(level=logging.DEBUG)
-import aiohttp
+from discord import app_commands
+import json
+import random
+import asyncio
+from datetime import datetime, timedelta
+from PIL import Image, ImageDraw, ImageFont
+import io
 import math
-from discord import Interaction, Embed
-from datetime import datetime
+import time
+import discord
+from discord.ext import commands
+import aiohttp
+from discord.ui import View, Button, Modal, TextInput
 import pymongo
+import gspread
+from discord import Embed, Interaction
 from pymongo import MongoClient, ReturnDocument
 
 # Define intents
