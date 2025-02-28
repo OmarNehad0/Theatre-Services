@@ -16,6 +16,8 @@ import aiohttp
 import math
 from discord import Interaction, Embed
 from datetime import datetime
+import pymongo
+from pymongo import MongoClient, ReturnDocument
 
 # Define intents
 intents = discord.Intents.default()
