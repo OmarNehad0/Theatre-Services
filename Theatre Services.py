@@ -56,7 +56,6 @@ def has_permission(user: discord.Member):
 async def log_command(interaction: discord.Interaction, command_name: str, details: str):
     # Mapping of servers to their respective log channels
     LOG_CHANNELS = {
-        1343444130986201118: 1344237125758881792,
         1343444130986201118: 1344237125758881792
     }
 
