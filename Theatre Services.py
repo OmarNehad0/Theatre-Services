@@ -633,8 +633,8 @@ with open("xp_data.json", "r") as f:
 # Constants
 EXCHANGE_RATE = 0.2  # 1M GP = $0.2
 EMOJI_CATEGORY = {
-    "gp": "<:Coins:1306015458344042616>",  # Replace with your emoji ID for GP
-    "usd": "<:Btc:1240968319889047633>"  # Replace with your emoji ID for USD
+    "gp": "<:Coins:1344508296140161087>",  # Replace with your emoji ID for GP
+    "usd": "<:Tether_USDT:1344507850914791474>"  # Replace with your emoji ID for USD
 }
 
 # Helper function to chunk text into multiple parts that fit Discord's field limit
@@ -732,8 +732,8 @@ async def s(ctx, skill_name: str, levels: str):
         # Full method calculations (showing all available methods)
         additional_text = "\n".join([
         f"**{method['title']}** (Requires level {method['req']}) {method['gpxp']}gp/xp\n"
-        f"**{(XP_TABLE[level_end] - XP_TABLE[level_start]) * method['gpxp'] / 1_000_000:,.2f}M** <:coins:1332378895047069777>\n"
-        f"**${((XP_TABLE[level_end] - XP_TABLE[level_start]) * method['gpxp'] / 1_000_000) * EXCHANGE_RATE:,.2f}** <:btc:1332372139541528627>\n"
+        f"**{(XP_TABLE[level_end] - XP_TABLE[level_start]) * method['gpxp'] / 1_000_000:,.2f}M** <:Coins:1344508296140161087>\n"
+        f"**${((XP_TABLE[level_end] - XP_TABLE[level_start]) * method['gpxp'] / 1_000_000) * EXCHANGE_RATE:,.2f}** <:Tether_USDT:1344507850914791474>\n"
         for method in skill["methods"]
         ])
 
@@ -755,15 +755,15 @@ async def s(ctx, skill_name: str, levels: str):
         # Add total cost
         embed.add_field(
             name=f"Using the cheapest methods available, level {level_start} to {level_end} will cost you:",
-            value=f"**{total_gp_cost:,.2f}M** <:Coins:1306015458344042616> \n"
-                  f"**${total_usd_cost:,.2f}** <:Btc:1240968319889047633>",
+            value=f"**{total_gp_cost:,.2f}M** <:Coins:1344508296140161087> \n"
+                  f"**${total_usd_cost:,.2f}** <:Tether_USDT:1344507850914791474>",
             inline=False,
         )
 
         # Add breakdown of methods
         breakdown_text = "\n".join([
             f"{segment['title']} at level {segment['start_level']} "
-            f"({segment['gpxp']}gp/xp = **{segment['gp_cost']:,.2f}M** <:coins:1332378895047069777>)"
+            f"({segment['gpxp']}gp/xp = **{segment['gp_cost']:,.2f}M** <:Coins:1344508296140161087>)"
             for segment in breakdown
         ])
         embed.add_field(
