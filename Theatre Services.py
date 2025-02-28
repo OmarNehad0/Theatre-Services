@@ -81,11 +81,11 @@ async def quest_calculator(ctx, *, quests: str):
         color=discord.Color.purple()
     )
     embed.set_thumbnail(
-        url="https://media.discordapp.net/attachments/1327412187228012596/1333768375804891136/he1.gif?ex=679a1819&is=6798c699&hm=f4cc870dd744931d8a5dd09ca07bd3c7a53b5781cec82a13952be601d8dbe52e&="
+        url="https://media.discordapp.net/attachments/1344265853100621914/1345088681924366406/avatar.gif?ex=67c346f4&is=67c1f574&hm=d84730a5eb8bd1b0a33d5d8783bef2faa3492f9f0fdce089ff79e7248d357e9b&="
     )  # Replace with your thumbnail URL
     embed.set_footer(
-            text="Heaven Services",
-            icon_url="https://media.discordapp.net/attachments/1327412187228012596/1333768375804891136/he1.gif?ex=679a1819&is=6798c699&hm=f4cc870dd744931d8a5dd09ca07bd3c7a53b5781cec82a13952be601d8dbe52e&="
+            text="Anas Services",
+            icon_url="https://media.discordapp.net/attachments/1344265853100621914/1345088681924366406/avatar.gif?ex=67c346f4&is=67c1f574&hm=d84730a5eb8bd1b0a33d5d8783bef2faa3492f9f0fdce089ff79e7248d357e9b&="
         )  # Footer with thumbnail-style icon
     # Add found quests to the embed
     if found_quests:
@@ -115,7 +115,7 @@ async def quest_calculator(ctx, *, quests: str):
         )
 
     # Add a footer as a thumbnail
-    embed.set_image(url="https://media.discordapp.net/attachments/1332341372333723732/1333038474571284521/avatar11.gif?ex=67977052&is=67961ed2&hm=e48d59d1efb3fcacae515a33dbb6182ef59c0268fba45628dd213c2cc241d66a&=")
+    embed.set_image(url="https://media.discordapp.net/attachments/1344265853100621914/1345088759590555779/banner.gif?ex=67c34706&is=67c1f586&hm=de2a45bd00658704c44511739e18aa3ba1c3b7453d1217685af0802321158d1e&=")
 
     # Send the embed
     await ctx.send(embed=embed)
@@ -266,18 +266,18 @@ async def feedback(ctx):
 
             # Create the embed with the required structure
             embed = Embed(
-            title="Heaven Vouches!",
+            title="Anas Vouches!",
             color=0x8a2be2,  # Purple color
             description=f"{stars_text}\n**Vouch**:\n{review}")
             embed.set_author(name=f"{interaction.user.name} left a vouch!", icon_url=interaction.user.display_avatar.url)
-            embed.set_thumbnail(url="https://media.discordapp.net/attachments/1327412187228012596/1333768375804891136/he1.gif?ex=679a1819&is=6798c699&hm=f4cc870dd744931d8a5dd09ca07bd3c7a53b5781cec82a13952be601d8dbe52e&=")
+            embed.set_thumbnail(url="https://media.discordapp.net/attachments/1344265853100621914/1345088681924366406/avatar.gif?ex=67c346f4&is=67c1f574&hm=d84730a5eb8bd1b0a33d5d8783bef2faa3492f9f0fdce089ff79e7248d357e9b&=")
 
             # Adding Date and User fields as single lines
             date_line = f"**Date**: `{interaction.created_at.strftime('%B %d, %Y')}`"
             user_line = f"**Discord User**: `{interaction.user.name}`"
             embed.description = f"{date_line}\n{user_line}\n\n{stars_text}\n**Vouch**:\n{review}"
 
-            embed.set_footer(text="Heaven Services", icon_url="https://media.discordapp.net/attachments/1327412187228012596/1333768375804891136/he1.gif?ex=679a1819&is=6798c699&hm=f4cc870dd744931d8a5dd09ca07bd3c7a53b5781cec82a13952be601d8dbe52e&=")
+            embed.set_footer(text="Anas Services", icon_url="https://media.discordapp.net/attachments/1344265853100621914/1345088681924366406/avatar.gif?ex=67c346f4&is=67c1f574&hm=d84730a5eb8bd1b0a33d5d8783bef2faa3492f9f0fdce089ff79e7248d357e9b&=")
 
             feedback_channel = bot.get_channel(FEEDBACK_CHANNEL_ID)
             if feedback_channel:
@@ -294,8 +294,8 @@ async def feedback(ctx):
         description="**We Appreciate Vouching For Us On [Sythe](https://www.sythe.org/threads/www-sythe-org-threads-cynx-osrs-service-vouch-thread/page-6#post-85913828).**\n\n**Please select your rating below (1-5 stars).**\nOnce selected, you will be asked to leave a review."
     )
     initial_embed.set_author(name=ctx.author.name, icon_url=ctx.author.display_avatar.url)
-    initial_embed.set_thumbnail(url="https://media.discordapp.net/attachments/1327412187228012596/1333768375804891136/he1.gif?ex=679a1819&is=6798c699&hm=f4cc870dd744931d8a5dd09ca07bd3c7a53b5781cec82a13952be601d8dbe52e&=")
-    initial_embed.set_footer(text="Heaven Services", icon_url="https://media.discordapp.net/attachments/1327412187228012596/1333768375804891136/he1.gif?ex=679a1819&is=6798c699&hm=f4cc870dd744931d8a5dd09ca07bd3c7a53b5781cec82a13952be601d8dbe52e&=")
+    initial_embed.set_thumbnail(url="https://media.discordapp.net/attachments/1344265853100621914/1345088681924366406/avatar.gif?ex=67c346f4&is=67c1f574&hm=d84730a5eb8bd1b0a33d5d8783bef2faa3492f9f0fdce089ff79e7248d357e9b&=")
+    initial_embed.set_footer(text="Anas Services", icon_url="https://media.discordapp.net/attachments/1344265853100621914/1345088681924366406/avatar.gif?ex=67c346f4&is=67c1f574&hm=d84730a5eb8bd1b0a33d5d8783bef2faa3492f9f0fdce089ff79e7248d357e9b&=")
 
     # Send the embed with rating buttons
     view = FeedbackView()
@@ -441,10 +441,10 @@ class KillCountModal(Modal):
                     embed.set_thumbnail(url=item["image"])
 
             embed.set_footer(
-            text="Heaven Services",
-            icon_url="https://media.discordapp.net/attachments/1327412187228012596/1333768375804891136/he1.gif?ex=679a1819&is=6798c699&hm=f4cc870dd744931d8a5dd09ca07bd3c7a53b5781cec82a13952be601d8dbe52e&="
+            text="Anas Services",
+            icon_url="https://media.discordapp.net/attachments/1344265853100621914/1345088681924366406/avatar.gif?ex=67c346f4&is=67c1f574&hm=d84730a5eb8bd1b0a33d5d8783bef2faa3492f9f0fdce089ff79e7248d357e9b&="
             )  # Footer with thumbnail-style icon
-            embed.set_author(name="Boss Calculator", icon_url="https://media.discordapp.net/attachments/1327412187228012596/1333768375804891136/he1.gif?ex=679a1819&is=6798c699&hm=f4cc870dd744931d8a5dd09ca07bd3c7a53b5781cec82a13952be601d8dbe52e&=")
+            embed.set_author(name="Boss Calculator", icon_url="https://media.discordapp.net/attachments/1344265853100621914/1345088681924366406/avatar.gif?ex=67c346f4&is=67c1f574&hm=d84730a5eb8bd1b0a33d5d8783bef2faa3492f9f0fdce089ff79e7248d357e9b&=")
 
             await interaction.response.send_message(embed=embed, ephemeral=True)
         except ValueError:
@@ -481,10 +481,10 @@ async def log_interaction(user, selected_boss, json_file):
         embed.set_thumbnail(url=boss["image"])
 
     embed.set_footer(
-            text="Heaven Services",
-            icon_url="https://media.discordapp.net/attachments/1327412187228012596/1333768375804891136/he1.gif?ex=679a1819&is=6798c699&hm=f4cc870dd744931d8a5dd09ca07bd3c7a53b5781cec82a13952be601d8dbe52e&="
+            text="Anas Services",
+            icon_url="https://media.discordapp.net/attachments/1344265853100621914/1345088681924366406/avatar.gif?ex=67c346f4&is=67c1f574&hm=d84730a5eb8bd1b0a33d5d8783bef2faa3492f9f0fdce089ff79e7248d357e9b&="
         )  # Footer with thumbnail-style icon
-    embed.set_author(name="Call Logs By Omar Bot", icon_url="https://media.discordapp.net/attachments/1327412187228012596/1333768375804891136/he1.gif?ex=679a1819&is=6798c699&hm=f4cc870dd744931d8a5dd09ca07bd3c7a53b5781cec82a13952be601d8dbe52e&=")
+    embed.set_author(name="Call Logs By Omar Bot", icon_url="https://media.discordapp.net/attachments/1344265853100621914/1345088681924366406/avatar.gif?ex=67c346f4&is=67c1f574&hm=d84730a5eb8bd1b0a33d5d8783bef2faa3492f9f0fdce089ff79e7248d357e9b&=")
 
     # Send the embed to the log channel
     await log_channel.send(embed=embed)
@@ -531,7 +531,7 @@ class BossSelectView(View):
 @bot.command()
 async def start(ctx):
     # Direct URL to the banner image
-    banner_url = "https://media.discordapp.net/attachments/1332341372333723732/1332806835375308811/demo1.gif?ex=67bece57&is=67bd7cd7&hm=3ad3d5ee046b9714f9ecf4d6c209a1f866b6137886f56667671402fa412a4bbf&="
+    banner_url = "https://media.discordapp.net/attachments/1344265853100621914/1345088735787745474/server_banner.gif?ex=67c34701&is=67c1f581&hm=6bd57d6ec99522c7681224acf38c9efc0b5ef121f19ad42b41b226ce0db498e5&=&width=810&height=456"
     import io
 
     # Download and send the banner image
@@ -612,10 +612,10 @@ async def b(ctx, *, boss_name_with_multiplier: str):
                 embed.set_thumbnail(url=item["image"])
 
         embed.set_footer(
-            text="Heaven Services",
-            icon_url="https://media.discordapp.net/attachments/1327412187228012596/1333768375804891136/he1.gif?ex=679a1819&is=6798c699&hm=f4cc870dd744931d8a5dd09ca07bd3c7a53b5781cec82a13952be601d8dbe52e&="
+            text="Anas Services",
+            icon_url="https://media.discordapp.net/attachments/1344265853100621914/1345088681924366406/avatar.gif?ex=67c346f4&is=67c1f574&hm=d84730a5eb8bd1b0a33d5d8783bef2faa3492f9f0fdce089ff79e7248d357e9b&="
         )  # Footer with thumbnail-style icon
-        embed.set_author(name="Boss Calculator", icon_url="https://media.discordapp.net/attachments/1327412187228012596/1333768375804891136/he1.gif?ex=679a1819&is=6798c699&hm=f4cc870dd744931d8a5dd09ca07bd3c7a53b5781cec82a13952be601d8dbe52e&=")
+        embed.set_author(name="Boss Calculator", icon_url="https://media.discordapp.net/attachments/1344265853100621914/1345088681924366406/avatar.gif?ex=67c346f4&is=67c1f574&hm=d84730a5eb8bd1b0a33d5d8783bef2faa3492f9f0fdce089ff79e7248d357e9b&=")
 
         await ctx.send(embed=embed)
     except Exception as e:
@@ -746,10 +746,10 @@ async def s(ctx, skill_name: str, levels: str):
             description=f"Requires {XP_TABLE[level_end] - XP_TABLE[level_start]:,} XP",
             color=discord.Color.blue(),
         )
-        embed.set_thumbnail(url="https://media.discordapp.net/attachments/1327412187228012596/1333768375804891136/he1.gif?ex=679a1819&is=6798c699&hm=f4cc870dd744931d8a5dd09ca07bd3c7a53b5781cec82a13952be601d8dbe52e&=")  # Thumbnail image
+        embed.set_thumbnail(url="https://media.discordapp.net/attachments/1344265853100621914/1345088681924366406/avatar.gif?ex=67c346f4&is=67c1f574&hm=d84730a5eb8bd1b0a33d5d8783bef2faa3492f9f0fdce089ff79e7248d357e9b&=")  # Thumbnail image
         embed.set_footer(
-            text="Heaven Services",
-            icon_url="https://media.discordapp.net/attachments/1327412187228012596/1333768375804891136/he1.gif?ex=679a1819&is=6798c699&hm=f4cc870dd744931d8a5dd09ca07bd3c7a53b5781cec82a13952be601d8dbe52e&="
+            text="Anas Services",
+            icon_url="https://media.discordapp.net/attachments/1344265853100621914/1345088681924366406/avatar.gif?ex=67c346f4&is=67c1f574&hm=d84730a5eb8bd1b0a33d5d8783bef2faa3492f9f0fdce089ff79e7248d357e9b&="
         )  # Footer with thumbnail-style icon
 
         # Add total cost
