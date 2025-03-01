@@ -1404,6 +1404,7 @@ async def s(ctx, skill_name: str, levels: str):
            name="",
            value=chunk,
            inline=False,
+           )
 
         # Send the embed
         await ctx.send(embed=embed)
