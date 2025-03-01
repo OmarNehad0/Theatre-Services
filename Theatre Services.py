@@ -903,7 +903,7 @@ async def feedback(ctx):
     initial_embed = Embed(
         title="Vouch For Us!",
         color=0x8a2be2,
-        description="**We Appreciate Vouching For Us On [Sythe](https://www.sythe.org/threads/www-sythe-org-threads-cynx-osrs-service-vouch-thread/page-6#post-85913828).**\n\n**Please select your rating below (1-5 stars).**\nOnce selected, you will be asked to leave a review."
+        description="**We Appreciate Vouching For Us On [Sythe](https://www.sythe.org/threads/anas-services-vouch-thread/).**\n\n**Please select your rating below (1-5 stars).**\nOnce selected, you will be asked to leave a review."
     )
     initial_embed.set_author(name=ctx.author.name, icon_url=ctx.author.display_avatar.url)
     initial_embed.set_thumbnail(url="https://media.discordapp.net/attachments/1344265853100621914/1345088681924366406/avatar.gif?ex=67c346f4&is=67c1f574&hm=d84730a5eb8bd1b0a33d5d8783bef2faa3492f9f0fdce089ff79e7248d357e9b&=")
@@ -1393,12 +1393,17 @@ async def s(ctx, skill_name: str, levels: str):
             )
 
         # Add each chunk as a separate field in the embed
-        for idx, chunk in enumerate(chunks):
-         embed.add_field(
-         name=f"Alternatively, if you want to choose a specific method (Part {idx + 1}):",
-         value=chunk,
-         inline=False,
-         )
+        embed.add_field(
+            name="__Alternatively, if you want to choose a specific method__",
+            value=chunks[0],
+            inline=False,
+        )
+
+        for chunk in chunks[1:]:
+           embed.add_field(
+           name="",
+           value=chunk,
+           inline=False,
 
         # Send the embed
         await ctx.send(embed=embed)
