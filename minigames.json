@@ -358,22 +358,6 @@
         "price": 120000000
       },
       {
-        "name": "Beginner Wand",
-        "price": 13000000
-      },
-      {
-        "name": "Apprentice Wand",
-        "price": 18000000
-      },
-      {
-        "name": "Teacher Wand",
-        "price": 31000000
-      },
-      {
-        "name": "Master Wand",
-        "price":
-      },
-      {
         "name": "Beginner Wand to Master",
         "price": 105000000
       }
