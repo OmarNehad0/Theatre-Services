@@ -1,7 +1,7 @@
 [
     {
       "name": "Theatre of Blood - Login",
-      "caption" : "You keep all loot. \nPrices may vary depending on stats and gear",
+      "caption" : "For A Custom Ask Create A Ticket.",
       "aliases": [
         "tob",
         "theatre of blood"
@@ -9,7 +9,7 @@
       "items": [
         {
           "name": "Login - With Scythe",
-          "price": 12000000,
+          "price": 10000000,
           "image" : "https://oldschool.runescape.wiki/images/thumb/Lil%27_Zik.png/1024px-Lil%27_Zik.png?5a023"
         },
         {
@@ -22,19 +22,19 @@
     },
     {
       "name": "Theatre of Blood - Modes",
-      "caption" : "You keep all loot. \nPrices may vary depending on stats and gear",
+      "caption" : "For A Custom Ask Create A Ticket.",
       "aliases": [
         "hmt","hardmode tob","hm tob","hmtob"
       ],
       "items": [
         {
           "name": "Hard Mode (Login) - With Scythe",
-          "price": 22000000,
+          "price": 20000000,
           "image" : "https://oldschool.runescape.wiki/images/thumb/Lil%27_Zik.png/1024px-Lil%27_Zik.png?5a023"
         },
         {
           "name": "Hard Mode (Login) - Without Scythe",
-          "price": 35000000,
+          "price": 33000000,
           "image" : "https://oldschool.runescape.wiki/images/thumb/Lil%27_Zik.png/1024px-Lil%27_Zik.png?5a023"
         }
       ],
