@@ -535,16 +535,6 @@
         "req": 55
       },
       {
-        "title": "Bake Pie",
-        "gpxp": 25,
-        "req": 65
-      },
-      {
-        "title": "Humidify",
-        "gpxp": 20,
-        "req": 68
-      },
-      {
         "title": "Nightmare Zone",
         "gpxp": 50,
         "req": 70
@@ -560,21 +550,6 @@
         "gpxp": 35,
         "req": 70,
         "caption": "HCIM is +100%"
-      },
-      {
-        "title": "Superglass Make",
-        "gpxp": 35,
-        "req": 77
-      },
-      {
-        "title": "Tan Leather",
-        "gpxp": 40,
-        "req": 78
-      },
-      {
-        "title": "String Jewellery",
-        "gpxp": 35,
-        "req": 80
       }
     ]
   },
