@@ -952,7 +952,6 @@ async def pay(ctx):
 
 # List of JSON file paths
 JSON_FILES = [
-    "MegaScales.json",
     "Chambers Of Xeric.json",
     "Theatre Of Blood.json",
     "Tombs Of Amascuts.json",
@@ -975,8 +974,7 @@ EMOJI_MAP = {
     "Theatre Of Blood.json": "🕸 | ",
     "Wilderness Bosses.json": "🦞 | ",
     "Tombs Of Amascuts.json": "🐫 | ",
-    "Other Bosses.json": "🦍 | ",
-    "MegaScales.json" : "🐲 | "
+    "Other Bosses.json": "🦍 | "
 }
 # Function to load data from a JSON file
 def load_bosses_from_file(file_path):
