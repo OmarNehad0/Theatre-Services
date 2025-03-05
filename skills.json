@@ -2,22 +2,22 @@
   {
     "name": "Agility",
     "image": "https://oldschool.runescape.wiki/images/8/86/Agility_icon.png?389e0",
-    "emoji": "<:Agility:1332625012233994270>",
+    "emoji": "<:Agility_icon:1322716910256914536>",
     "aliases": [
       "agility",
       "agil"
     ],
     "onlyShowBest": false,
-    "caption": "1-25: Tourist trap quest or 5m\nPrice per marks of grace = 350k/ea (Canifis course or better required)\n+10% If you need marks collecting while training.",
+    "caption": "For A Custom Ask Create A Ticket.",
     "methods": [
       {
         "title": "Gnome Stronghold Course",
-        "gpxp": 700,
+        "gpxp": 690,
         "req": 1
       },
       {
         "title": "Alkharid Rooftop Course",
-        "gpxp": 350,
+        "gpxp": 340,
         "req": 20
       },
       {
@@ -27,47 +27,47 @@
       },
       {
         "title": "Canifis Rooftop Course",
-        "gpxp": 260,
+        "gpxp": 270,
         "req": 40
       },
       {
         "title": "Falador Rooftop Course",
-        "gpxp": 230,
+        "gpxp": 240,
         "req": 50
       },
       {
         "title": "Seers Rooftop Course Without Teleport",
-        "gpxp": 210,
+        "gpxp": 220,
         "req": 60
       },
       {
         "title": "Seers Rooftop Course With Teleport",
-        "gpxp": 150,
+        "gpxp": 160,
         "req": 60
       },
       {
         "title": "Pollnivneach Rooftop Course",
-        "gpxp": 170,
+        "gpxp": 175,
         "req": 70
       },
       {
         "title": "Prifddinas Agility Course",
-        "gpxp": 150,
+        "gpxp": 155,
         "req": 75
       },
       {
         "title": "Prifddinas Agility Course",
-        "gpxp": 130,
+        "gpxp": 125,
         "req": 80
       },
       {
         "title": "Rellekka Rooftop Course With Teleport",
-        "gpxp": 110,
+        "gpxp": 115,
         "req": 80
       },
       {
         "title": "Ardougne Rooftop Course",
-        "gpxp": 90,
+        "gpxp": 95,
         "req": 90
       }
     ]
@@ -75,57 +75,57 @@
   {
     "name": "Construction",
     "image": "https://oldschool.runescape.wiki/images/f/f6/Construction_icon.png?f9bf7",
-    "emoji": "<:Construction:1332625163862413324>",
+    "emoji": "<:Construction_icon:1322716913360703590>",
     "aliases": [
       "construction",
       "con"
     ],
     "onlyShowBest": false,
-    "caption": "Prices below for mahogany homes are per exp (gp/xp).\n25% If No Plank Sack.",
+    "caption": "For A Custom Ask Create A Ticket.",
     "methods": [
       {
         "title": "Any type",
-        "gpxp": 120,
+        "gpxp": 115,
         "req": 1
       },
       {
         "title": "Oak Larders Without Butler",
-        "gpxp": 100,
+        "gpxp": 110,
         "req": 33
       },
       {
         "title": "Oak Larders With Butler",
-        "gpxp": 55,
+        "gpxp": 60,
         "req": 50
       },
       {
         "title": "Mahogany Tables",
-        "gpxp": 40,
+        "gpxp": 45,
         "req": 52
       },
       {
         "title": "Teak Garden Bench",
-        "gpxp": 55,
+        "gpxp": 60,
         "req": 66
       },
       {
         "title": "Mahogany Homes",
-        "gpxp": 450,
+        "gpxp": 420,
         "req": 1
       },
       {
         "title": "Mahogany Homes",
-        "gpxp": 300,
+        "gpxp": 290,
         "req": 20
       },
       {
         "title": "Mahogany Homes",
-        "gpxp": 220,
+        "gpxp": 210,
         "req": 50
       },
       {
         "title": "Mahogany Homes",
-        "gpxp": 160,
+        "gpxp": 150,
         "req": 70
       }
     ]
@@ -133,32 +133,32 @@
   {
     "name": "Cooking",
     "image": "https://oldschool.runescape.wiki/images/d/dc/Cooking_icon.png?a0156",
-    "emoji": "<:Cooking:1332624838212456531>",
+    "emoji": "<:Cooking_icon:1322716915247874098>",
     "aliases": [
       "cooking",
       "cook"
     ],
     "onlyShowBest": false,
-    "caption": "",
+    "caption": "For A Custom Ask Create A Ticket.",
     "methods": [
       {
         "title": "Best Fish",
-        "gpxp": 90,
+        "gpxp": 88,
         "req": 1
       },
       {
         "title": "Cooking Fish Without Cooking Gauntlets",
-        "gpxp": 80,
+        "gpxp": 75,
         "req": 35
       },
       {
         "title": "Wines",
-        "gpxp": 25,
+        "gpxp": 22,
         "req": 35
       },
       {
         "title": "Cooking Fish With Cooking Gauntlets",
-        "gpxp": 60,
+        "gpxp": 55,
         "req": 68
       }
     ]
@@ -166,7 +166,7 @@
   {
     "name": "Crafting",
     "image": "https://oldschool.runescape.wiki/images/c/cf/Crafting_icon.png?a1f71",
-    "emoji": "<:Crafting:1332624735888211988>",
+    "emoji": "<:craft:1208805269157715968>",
     "aliases": [
       "crafting",
       "craft"
@@ -175,27 +175,27 @@
     "methods": [
       {
         "title": "Leather/Gems",
-        "gpxp": 170,
+        "gpxp": 165,
         "req": 1
       },
       {
          "title": "Molten Glasses (irons) With (Gathering)",
-        "gpxp": 450,
+        "gpxp": 440,
          "req": 1
       },
       {
         "title": "Molten Glasses (irons) With (Without Gathering)",
-        "gpxp": 200,
+        "gpxp": 190,
         "req": 1
     },
       {
         "title": "Molten Glasses (irons) With (Gathering)",
-        "gpxp": 400,
+        "gpxp": 390,
         "req": 46
       },
       {
         "title": "Molten Glasses (irons) With (Without Gathering)",
-        "gpxp": 180,
+        "gpxp": 170,
         "req": 46
     },
       {
@@ -225,12 +225,12 @@
       },
       {
         "title": "Molten Glasses (irons) With (Gathering)",
-        "gpxp": 350,
+        "gpxp": 320,
         "req": 87
       },
       {
       "title": "Molten Glasses (irons) With Without (Gathering)",
-      "gpxp": 150,
+      "gpxp": 130,
       "req": 87
     }
     ]
@@ -238,42 +238,42 @@
   {
     "name": "Farming",
     "image": "https://oldschool.runescape.wiki/images/f/fc/Farming_icon.png?558fa",
-    "emoji": "<:Farming:1332625141934456832>",
+    "emoji": "<:Farming_icon:1322716919815475241>",
     "aliases": [
       "farming",
       "farm"
     ],
     "onlyShowBest": false,
-    "caption": "+15% If No Teleport/Stamina",
+    "caption": "For A Custom Ask Create A Ticket.",
     "methods": [
       {
         "title": "Best Tree Seeds",
-        "gpxp": 160,
+        "gpxp": 155,
         "req": 1
       },
       {
         "title": "Tree Runs + Fruit Tree Runs",
-        "gpxp": 80,
+        "gpxp": 77,
         "req": 45
       },
       {
         "title": "Tree Runs + Fruit Tree Runs",
-        "gpxp": 50,
+        "gpxp": 48,
         "req": 75
       },
       {
         "title": " Tithe Farm Using Golovanova Seeds",
-        "gpxp": 230,
+        "gpxp": 220,
         "req": 34
       },
       {
         "title": "Tithe Farm Using Bologano Seeds",
-        "gpxp": 180,
+        "gpxp": 10,
         "req": 54
       },
       {
         "title": "Tithe Farm Using Logavano Seeds",
-        "gpxp": 110,
+        "gpxp": 105,
         "req": 74
       }
     ]
@@ -281,32 +281,32 @@
   {
     "name": "Firemaking",
     "image": "https://oldschool.runescape.wiki/images/9/9b/Firemaking_icon.png?45ea0",
-    "emoji": "<:Firemaking:1332624860714893384>",
+    "emoji": "<:Firemaking_icon:1322716921678008372>",
     "aliases": [
       "firemaking",
       "fm"
     ],
     "onlyShowBest": false,
-    "caption": "Hcim Order +100%\n600k Per Crate",
+    "caption": "For A Custom Ask Create A Ticket.",
     "methods": [
       {
         "title": "Burning Best Logs",
-        "gpxp": 150,
+        "gpxp": 145,
         "req": 1
       },
       {
         "title": "Burning Best Logs",
-        "gpxp": 100,
+        "gpxp": 95,
         "req": 1
       },
       {
         "title": "Wintertodt (No Fletching)",
-        "gpxp": 50,
+        "gpxp": 48,
         "req": 50
       },
       {
         "title": "Wintertodt (With Fletching)",
-        "gpxp": 60,
+        "gpxp": 58,
         "req": 50
       }
     ]
@@ -314,50 +314,50 @@
   {
     "name": "Fishing",
     "image": "https://oldschool.runescape.wiki/images/3/3b/Fishing_icon.png?15a98",
-    "emoji": "<:Fishing:1332624811293413386>",
+    "emoji": "<:Fishing_icon:1322716925784100905>",
     "aliases": [
       "fishing",
       "fish"
     ],
     "onlyShowBest": false,
-    "caption": "",
+    "caption": "For A Custom Ask Create A Ticket.",
     "methods": [
       {
         "title": "Power Fishing",
-        "gpxp": 150,
+        "gpxp": 145,
         "req": 1
       },
       {
         "title": "Tempoross - Regular Harpoon",
-        "gpxp": 400,
+        "gpxp": 405,
         "req": 35,
-        "caption": "Or Price Per Permit 400000"
+        "caption": "Price Per Permit 350000"
       },
       {
         "title": "Tempoross - Dragon/Crystal Harpoon",
-        "gpxp": 370,
+        "gpxp": 380,
         "req": 35,
-        "caption": "Or Price Per Permit 370000"
+        "caption": "Price Per Permit 300000"
       },
       {
         "title": "Tempoross - Infernal Harpoon",
-        "gpxp": 350,
+        "gpxp": 360,
         "req": 35,
-        "caption": "Or Price Per Permit 350000"
+        "caption": "Price Per Permit 250000"
       },
       {
         "title": "Minnows",
-        "gpxp": 150,
+        "gpxp": 160,
         "req": 82
       },
       {
         "title": "Barb Fishing",
-        "gpxp": 140,
+        "gpxp": 130,
         "req": 48
       },
       {
         "title": "Barb Fishing",
-        "gpxp": 120,
+        "gpxp": 125,
         "req": 70
       }
     ]
@@ -365,56 +365,56 @@
   {
     "name": "Fletching",
     "image": "https://oldschool.runescape.wiki/images/9/93/Fletching_icon.png?15cda",
-    "emoji": "<:Fletching:1332625091032252481>",
+    "emoji": "<:Fletching_icon:1322716928342757506>",
     "aliases": [
       "fletching",
       "fletch"
     ],
     "onlyShowBest": false,
-    "caption": "",
+    "caption": "For A Custom Ask Create A Ticket.",
     "methods": [
       {
         "title": "Best Method",
-        "gpxp": 80,
+        "gpxp": 75,
         "req": 1
       },
       {
         "title": "Mithril Darts",
-        "gpxp": 35,
+        "gpxp": 33,
         "req": 52
       },
       {
         "title": "Adamant Darts",
-        "gpxp": 30,
+        "gpxp": 29,
         "req": 67
       },
       {
         "title": "Rune Darts",
-        "gpxp": 25,
+        "gpxp": 27,
         "req": 81,
-        "caption": "You provide all supplies and keep all supplies/loot."
+        "caption": "For A Custom Ask Create A Ticket."
       }
     ]
   },
   {
     "name": "Herblore",
     "image": "https://oldschool.runescape.wiki/images/0/03/Herblore_icon.png?ffa9e",
-    "emoji": "<:Herblore:1332625035503992943>",
+    "emoji": "<:Herblore_icon:1322716930507014205>",
     "aliases": [
       "herblore",
       "herb"
     ],
     "onlyShowBest": false,
-    "caption": "",
+    "caption": "For A Custom Ask Create A Ticket.",
     "methods": [
       {
         "title": "Best Potion",
-        "gpxp": 40,
+        "gpxp": 35,
         "req": 3
       },
       {
         "title": "Prayer Potion",
-        "gpxp": 35,
+        "gpxp": 37,
         "req": 38
       },
       {
@@ -429,7 +429,7 @@
       },
       {
         "title": "Saradomin Brew",
-        "gpxp": 20,
+        "gpxp": 22,
         "req": 81
       }
     ]
@@ -437,68 +437,68 @@
   {
     "name": "Hunter",
     "image": "https://oldschool.runescape.wiki/images/d/dd/Hunter_icon.png?8762f",
-    "emoji": "<:Hunter:1332625188289908808>",
+    "emoji": "<:Hunter_icon:1322716935049183295>",
     "aliases": [
       "hunter",
       "hunt",
       "hunting"
     ],
     "onlyShowBest": false,
-    "caption": "",
+    "caption": "For A Custom Ask Create A Ticket.",
     "methods": [
       {
         "title": "Starter Method",
-        "gpxp": 550,
+        "gpxp": 540,
         "req": 1
       },
       {
         "title": "Swamp Lizards",
-        "gpxp": 200,
+        "gpxp": 210,
         "req": 29
       },
       {
         "title": "Orange Salamanders",
-        "gpxp": 150,
+        "gpxp": 160,
         "req": 47
       },
       {
         "title": "Red Salamanders",
-        "gpxp": 120,
+        "gpxp": 130,
         "req": 59
       },
       {
         "title": "Manacial Monkey MM2 Required",
-        "gpxp": 100,
+        "gpxp": 110,
         "req": 60
       },
       {
         "title": "Red chinchompas With Diary",
-        "gpxp": 150,
+        "gpxp": 160,
         "req": 63
       },
       {
         "title": "Red chinchompas Without Diary",
-        "gpxp": 190,
+        "gpxp": 200,
         "req": 63
       },
       {
         "title": "Black Salamanders",
-        "gpxp": 90,
+        "gpxp": 100,
         "req": 67
       },
       {
         "title": "Black Chinchompas",
-        "gpxp": 105,
+        "gpxp": 110,
         "req": 73
       },
       {
         "title": "Herbiboar With Stamina",
-        "gpxp": 220,
+        "gpxp": 230,
         "req": 80
       },
       {
         "title": "Herbiboar Without Stamina",
-        "gpxp": 300,
+        "gpxp": 310,
         "req": 80
       }
     ]
@@ -506,32 +506,32 @@
   {
     "name": "Magic",
     "image": "https://oldschool.runescape.wiki/images/5/5c/Magic_icon.png?334cf",
-    "emoji": "<:Magic:1332624632930504766>",
+    "emoji": "<:Magic_icon:1322716936739623022>",
     "aliases": [
       "magic",
       "mage"
     ],
     "onlyShowBest": false,
-    "caption": "",
+    "caption": "For A Custom Ask Create A Ticket.",
     "methods": [
       {
         "title": "Sand crabs",
-        "gpxp": 170,
+        "gpxp": 180,
         "req": 1
       },
       {
         "title": "Splashing",
-        "gpxp": 50,
+        "gpxp": 60,
         "req": 1
       },
       {
         "title": "Low Alchemy",
-        "gpxp": 160,
+        "gpxp": 170,
         "req": 21
       },
       {
         "title": "High Alchemy",
-        "gpxp": 100,
+        "gpxp": 105,
         "req": 55
       },
       {
@@ -551,15 +551,15 @@
       },
       {
         "title": "Bursting (MM1 Tunnels)",
-        "gpxp": 50,
+        "gpxp": 45,
         "req": 70,
         "caption": "HCIM +100%"
       },
       {
         "title": "Bursting (MM2 Tunnels)",
-        "gpxp": 30,
+        "gpxp": 35,
         "req": 70,
-        "caption": "HCIM +100%"
+        "caption": "HCIM is +100%"
       },
       {
         "title": "Superglass Make",
@@ -581,7 +581,7 @@
   {
     "name": "Melee",
     "image": "https://oldschool.runescape.wiki/images/Melee.png?0a53d",
-    "emoji": "<:Strength:1332624310975856691>",
+    "emoji": "<:Strength_icon:1322716945874948170>",
     "aliases": [
       "melee",
       "mains",
@@ -596,7 +596,7 @@
       "def"
     ],
     "onlyShowBest": false,
-    "caption": "Blast furnace training is 5x normal price",
+    "caption": "For A Custom Ask Create A Ticket.",
     "methods": [
       {
         "title": "Sand Crabs - Mains",
@@ -653,37 +653,37 @@
   {
     "name": "Mining",
     "image": "https://oldschool.runescape.wiki/images/4/4a/Mining_icon.png?00870",
-    "emoji": "<:Mining:1332624760089346140>",
+    "emoji": "<:Mining_icon:1322716939184902266>",
     "aliases": [
       "mining",
       ""
     ],
     "onlyShowBest": false,
-    "caption": "1-35: 12M (Set price)\n+25% Ironman If No D Pickaxe",
+    "caption": "For A Custom Ask Create A Ticket.",
     "methods": [
       {
         "title": "Copper/Tin",
-        "gpxp": 550,
+        "gpxp": 500,
         "req": 1
       },
       {
         "title": "Iron Ore Power Mining",
-        "gpxp": 190,
+        "gpxp": 180,
         "req": 15
       },
       {
         "title": "Motherlode Mine",
-        "gpxp": 140,
+        "gpxp": 145,
         "req": 35
       },
       {
         "title": "Motherlode Mine",
-        "gpxp": 125,
+        "gpxp": 130,
         "req": 72
       },
       {
         "title": "Motherlode Mine (Upper Level)",
-        "gpxp": 110,
+        "gpxp": 115,
         "req": 72
       }
     ]
@@ -691,22 +691,22 @@
   {
     "name": "Prayer",
     "image": "https://oldschool.runescape.wiki/images/f/f2/Prayer_icon.png?ca0dc",
-    "emoji": "<:Prayer:1332624605621256232>",
+    "emoji": "<:Prayer_icon:1322716942145949757>",
     "aliases": [
       "prayer",
       "pray"
     ],
     "onlyShowBest": false,
-    "caption": "",
+    "caption": "For A Custom Ask Create A Ticket.",
     "methods": [
       {
         "title": "Ecto",
-        "gpxp": 110,
+        "gpxp": 115,
         "req": 1
       },
       {
         "title": "Chaos Altar Using Any Bones",
-        "gpxp": 90,
+        "gpxp": 85,
         "req": 1
       },
       {
@@ -716,12 +716,12 @@
       },
       {
         "title": "Zeah Using Heads",
-        "gpxp": 130,
+        "gpxp": 135,
         "req": 16
       },
       {
         "title": "Gilded Altar Using Superior Dragon Bones",
-        "gpxp": 35,
+        "gpxp": 30,
         "req": 70
       }
     ]
@@ -729,114 +729,114 @@
   {
     "name": "Ranged",
     "image": "https://oldschool.runescape.wiki/images/1/19/Ranged_icon.png?01b0e",
-    "emoji": "<:Ranged:1332624576051679293>",
+    "emoji": "<:Ranged_icon:1322718954913005609>",
     "aliases": [
       "ranged",
       "range",
       "ranging"
     ],
     "onlyShowBest": false,
-    "caption": "Prices May Vary Depending On Stats/Gear.",
+    "caption": "For A Custom Ask Create A Ticket.",
     "methods": [
       {
         "title": "Sand Crabs Low Level",
-        "gpxp": 70,
+        "gpxp": 65,
         "req": 1
       },
       {
         "title": "Sand Crabs Higher Level",
-        "gpxp": 50,
+        "gpxp": 45,
         "req": 60
       },
       {
         "title": "Cannon Only Low Level",
-        "gpxp": 180,
+        "gpxp": 185,
         "req": 1
       },
       {
         "title": "Cannon Only Higher Level",
-        "gpxp": 140,
+        "gpxp": 145,
         "req": 50
       },
       {
         "title": "Cannon With Best Ranged Weapon Low Level",
-        "gpxp": 90,
+        "gpxp": 95,
         "req": 1
       },
       {
         "title": "Cannon With Best Ranged Weapon Higher Level",
-        "gpxp": 50,
+        "gpxp": 55,
         "req": 50
       },
       {
         "title": "NMZ (Prayer/Absorption)",
-        "gpxp": 35,
+        "gpxp": 30,
         "req": 60
       },
       {
         "title": "Chinning - MM1 Tunnels",
-        "gpxp": 40,
+        "gpxp": 35,
         "req": 70,
-        "caption": "Hardcore +75%"
+        "caption": "Hardcore +100%"
       },
       {
         "title": "Chinning - MM2 Tunnels",
         "gpxp": 25,
         "req": 70,
-        "caption": "Hardcore +75%"
+        "caption": "Hardcore is +100%"
       }
     ]
   },
   {
     "name": "Runecrafting",
     "image": "https://oldschool.runescape.wiki/images/6/63/Runecraft_icon.png?c278c",
-    "emoji": "<:Runecraft:1332624658767282198>",
+    "emoji": "<:Runecraft:1208805319703011418>",
     "aliases": [
       "runecrafting",
       "runecraft",
       "rc"
     ],
     "onlyShowBest": false,
-    "caption": "If using Daeyalt Essence, the price is 20% cheaper",
+    "caption": "For A Custom Ask Create A Ticket.",
     "methods": [
       {
         "title": "Library",
-        "gpxp": 300,
+        "gpxp": 305,
         "req": 1
       },
       {
         "title": "Any/Best Runes",
-        "gpxp": 400,
+        "gpxp": 405,
         "req": 1
       },
       {
         "title": "ZMI",
-        "gpxp": 180,
+        "gpxp": 190,
         "req": 1
       },
       {
         "title": "Lava Runes Using Magic Imbue",
-        "gpxp": 150,
+        "gpxp": 160,
         "req": 23
       },
       {
         "title": "Lava Runes Without Magic Imbue",
-        "gpxp": 220,
+        "gpxp": 230,
         "req": 23
       },
       {
         "title": "Guardian of The Rift Low Level",
-        "gpxp": 220,
+        "gpxp": 218,
         "req": 27
       },
       {
         "title": "Guardian of The Rift Higher Level",
-        "gpxp": 190,
+        "gpxp": 188,
         "req": 77
       },
       {
         "title": "Blood/Soul Runes",
-        "gpxp": 150,
+        "gpxp": 148,
         "req": 77
       }
     ]
@@ -844,27 +844,27 @@
   {
     "name": "Slayer",
     "image": "https://oldschool.runescape.wiki/images/2/28/Slayer_icon.png?cd34f",
-    "emoji": "<:Slayer:1332625116181561426>",
+    "emoji": "<:Slayer_:1208805321255165962>",
     "aliases": [
       "slayer",
       "slay"
     ],
     "onlyShowBest": false,
-    "caption": "No Bursting +10%\nKarluum Cave +15%\nNo Cannon +25%\nNo Prayer +25%\nIronman No Supplies +35%\nBoss Tasks +40%\nHardcore No Supplies +45%\nHardcore +100%",
+    "caption": "For A Custom Ask Create A Ticket.",
     "methods": [
       {
         "title": "Stats Below 70's With Low Tier Gear",
-        "gpxp": 420,
+        "gpxp": 410,
         "req": 1
       },
       {
         "title": "Stats 70-85 With High Tier Gear",
-        "gpxp": 250,
+        "gpxp": 260,
         "req": 1
       },
       {
         "title": "Stats 85+ With Top Tier Gear",
-        "gpxp": 180,
+        "gpxp": 190,
         "req": 1
       }
     ]
@@ -872,7 +872,7 @@
   {
     "name": "Smithing",
     "image": "https://oldschool.runescape.wiki/images/d/dd/Smithing_icon.png?d26c5",
-    "emoji": "<:Smithing:1332624784126906449>",
+    "emoji": "<:Smithin:1208805323188740137>",
     "aliases": [
       "smithing",
       "smith"
@@ -882,22 +882,22 @@
     "methods": [
       {
         "title": "Best Bars",
-        "gpxp": 100,
+        "gpxp": 105,
         "req": 1
       },
       {
         "title": "Darts/Knives",
-        "gpxp": 100,
+        "gpxp": 105,
         "req": 40
       },
       {
         "title": "Best Platebodies",
-        "gpxp": 60,
+        "gpxp": 65,
         "req": 40
       },
       {
         "title": "Goldsmith Gauntlets",
-        "gpxp": 50,
+        "gpxp": 55,
         "req": 40
       }
     ]
@@ -905,17 +905,17 @@
   {
     "name": "Thieving",
     "image": "https://oldschool.runescape.wiki/images/4/4a/Thieving_icon.png?973fe",
-    "emoji": "<:Thieving:1332625059344416799>",
+    "emoji": "<:Thievi:1208805325025575012>",
     "aliases": [
       "thieving",
       "thief"
     ],
     "onlyShowBest": false,
-    "caption": "",
+    "caption": "For A Custom Ask Create A Ticket.",
     "methods": [
       {
         "title": "Starter Method",
-        "gpxp": 400,
+        "gpxp": 405,
         "req": 1
       },
       {
@@ -925,32 +925,32 @@
       },
       {
         "title": "Ardy Knights (55-75 Thieving) With Diary",
-        "gpxp": 120,
+        "gpxp": 119,
         "req": 55
       },
       {
         "title": "Ardy Knights (75-95 Thieving) With Diary",
-        "gpxp": 100,
+        "gpxp": 105,
         "req": 75
       },
       {
         "title": "Ardy Knights (95-99 Thieving) With Diary",
-        "gpxp": 60,
+        "gpxp": 62,
         "req": 95
       },
       {
         "title": "Ardy Knights (55-75 Thieving) Without Diary",
-        "gpxp": 150,
+        "gpxp": 152,
         "req": 55
       },
       {
         "title": "Ardy Knights (75-95 Thieving) Without Diary",
-        "gpxp": 125,
+        "gpxp": 128,
         "req": 75
       },
       {
         "title": "Ardy Knights (95-99 Thieving) Without Diary",
-        "gpxp": 80,
+        "gpxp": 84,
         "req": 95
       }
     ]
@@ -958,28 +958,28 @@
   {
     "name": "Woodcutting",
     "image": "https://oldschool.runescape.wiki/images/f/f4/Woodcutting_icon.png?6ead4",
-    "emoji": "<:Woodcutting:1332624881959047181>",
+    "emoji": "<:Woodcut:1208805327735099482>",
     "aliases": [
       "woodcutting",
       "woodcut",
       "wc"
     ],
     "onlyShowBest": true,
-    "caption": "",
+    "caption": "For A Custom Ask Create A Ticket.",
     "methods": [
       {
         "title": "Starter Method Best Trees",
-        "gpxp": 300,
+        "gpxp": 305,
         "req": 1
       },
       {
         "title": "Teak Trees",
-        "gpxp": 100,
+        "gpxp": 98,
         "req": 35
       },
       {
         "title": "Redwood Trees",
-        "gpxp": 70,
+        "gpxp": 72,
         "req": 90
       }
     ]
