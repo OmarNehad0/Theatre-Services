@@ -6,7 +6,7 @@
       "barb",
       "ba"
     ],
-    "caption": "+50% For any group hardcore ironman",
+    "caption": "For A Custom Ask Create A Ticket",
     "items": [
       {
         "name": "Torso",
@@ -30,19 +30,19 @@
       },
       {
         "name": "Price per round",
-        "price": 12500000
+        "price": 10000000
       },
       {
         "name": "Hard Diary",
         "price": 12500000
       },
       {
-        "name": "Elite Diary - 32.5m each",
-        "price": 130000000
+        "name": "Lvl 5 all roles",
+        "price": 150000000
       },
       {
         "name": "High gamble",
-        "price": 14000000
+        "price": 10000000
       },
       {
         "name": "Low gamble",
@@ -60,27 +60,27 @@
     "items": [
       {
         "name": "Per ticket",
-        "price": 130000
+        "price": 120000
       },
       {
         "name": "Toadflax",
-        "price": 390000
+        "price": 380000
       },
       {
         "name": "Snapdragon",
-        "price": 1300000
+        "price": 1200000
       },
       {
         "name": "Graceful outfit recolor",
-        "price": 32500000
+        "price": 31500000
       },
       {
         "name": "Pirate Hook",
-        "price": 104000000
+        "price": 100000000
       },
       {
         "name": "1000 tickets",
-        "price": 130000000
+        "price": 120000000
       }
     ]
   },
@@ -94,7 +94,7 @@
     "items": [
       {
         "name": "Per ticket",
-        "price": 500000
+        "price": 520000
       }
     ]
   },
@@ -108,47 +108,47 @@
     "items": [
       {
         "name": "Imp Scroll",
-        "price": 50000000
+        "price": 52000000
       },
       {
         "name": "Goblin Scroll",
-        "price": 10000000
+        "price": 12000000
       },
       {
         "name": "Skeleton Scroll",
-        "price": 20000000
+        "price": 22000000
       },
       {
         "name": "Zombie Scroll",
-        "price": 20000000
+        "price": 22000000
       },
       {
         "name": "Giant Scroll",
-        "price": 25000000
+        "price": 25200000
       },
       {
         "name": "Hobgoblin Scroll",
-        "price": 20000000
+        "price": 22000000
       },
       {
         "name": "Ghoul Scroll",
-        "price": 35000000
+        "price": 35200000
       },
       {
         "name": "Earth Warrior Scroll",
-        "price": 55000000
+        "price": 55200000
       },
       {
         "name": "Jogre Scroll",
-        "price": 40000000
+        "price": 42000000
       },
       {
         "name": "Lesser Demons",
-        "price": 5000000
+        "price": 5200000
       },
       {
         "name": "Full Cape",
-        "price": 3250000000
+        "price": 3500000000
       }
     ]
   },
@@ -162,7 +162,7 @@
     "items": [
       {
         "name": "Per kill",
-        "price": 50000
+        "price": 40000
       }
     ]
   },
@@ -173,39 +173,39 @@
       "giants",
       "gfoundry"
     ],
-    "caption": "All prices are per point, and assumes bars are banked. 5% Extra if using metal items",
+    "caption": "For A Custom Ask Create A Ticket",
     "items": [
       {
         "name": "Lvl 30 to 55 Smithing - 50% Iron + 50% Steel",
-        "price": 55000
-      },
-      {
-        "name": "Lvl 30 to 55 Smithing - 70% Iron + 30% Steel",
         "price": 60000
       },
       {
-        "name": "Lvl 55 to 70 Smithing - 50% Steel + 50% Mithril",
-        "price": 45000
+        "name": "Lvl 30 to 55 Smithing - 70% Iron + 30% Steel",
+        "price": 65000
       },
       {
-        "name": "Lvl 55 to 70 Smithing - 70% Steel + 30% Mithril",
+        "name": "Lvl 55 to 70 Smithing - 50% Steel + 50% Mithril",
         "price": 50000
       },
       {
-        "name": "Lvl 70 to 85 Smithing - 50% Mithril + 50% Adamant",
-        "price": 35000
+        "name": "Lvl 55 to 70 Smithing - 70% Steel + 30% Mithril",
+        "price": 55000
       },
       {
-        "name": "Lvl 70 to 85 Smithing - 70% Mithril + 30% Adamant",
+        "name": "Lvl 70 to 85 Smithing - 50% Mithril + 50% Adamant",
         "price": 40000
       },
       {
+        "name": "Lvl 70 to 85 Smithing - 70% Mithril + 30% Adamant",
+        "price": 45000
+      },
+      {
         "name": "Lvl 85 Smithing - 50% Adamant + 50% Rune",
-        "price": 25000
+        "price": 30000
       },
       {
         "name": "Lvl 85 Smithing - 70% Adamant + 30% Rune",
-        "price": 30000
+        "price": 35000
       }
     ]
   },
@@ -218,23 +218,23 @@
     "items": [
       {
         "name": "Lvl 35 to 44",
-        "price": 1000000
-      },
+        "price": 1300000
+      }
       {
         "name": "Lvl 44 to 54",
-        "price": 850000
+        "price": 830000
       },
       {
         "name": "Lvl 54 to 65",
-        "price": 750000
+        "price": 730000
       },
       {
         "name": "Lvl 65 to 77",
-        "price": 650000
+        "price": 630000
       },
       {
         "name": "Lvl 77 to 99",
-        "price": 550000
+        "price": 530000
       }
     ]
   },
@@ -249,23 +249,23 @@
     "items": [
       {
         "name": "Floor 1 - 52 Agility",
-        "price": 400000
+        "price": 450000
       },
       {
         "name": "Floor 2 - 62 Agility",
-        "price": 350000
+        "price": 400000
       },
       {
         "name": "Floor 3 - 72 Agility",
-        "price": 300000
+        "price": 350000
       },
       {
         "name": "Floor 4 - 82 Agility",
-        "price": 250000
+        "price": 300000
       },
       {
         "name": "Floor 5 - 92 Agility",
-        "price": 225000
+        "price": 250000
       }
     ]
   },
@@ -275,7 +275,7 @@
     "aliases": [
       "lms"
     ],
-    "caption": "650k when ordering over 100 points",
+    "caption": "For A Custom Ask Create A Ticket",
     "items": [
       {
         "name": "Per point",
@@ -294,7 +294,7 @@
       "ma1",
       "ma2"
     ],
-    "caption": "200% extra for HCIM.",
+    "caption": "HCIM is +200%.",
     "items": [
       {
         "name": "MA 1 - with 43+ pray",
@@ -302,19 +302,19 @@
       },
       {
         "name": "MA 1 - without 43 pray",
-        "price": 12000000
+        "price": 15000000
       },
       {
         "name": "MA 2 - one cape only",
-        "price": 45000000
+        "price": 4000000
       },
       {
         "name": "Additional MA 2 Cape",
-        "price": 7000000
+        "price": 8000000
       },
       {
         "name": "Spells unlocked",
-        "price": 15000000
+        "price": 17000000
       }
     ]
   },
@@ -327,7 +327,7 @@
     "items": [
       {
         "name": "Bones to Peaches Unlock",
-        "price": 70000000
+        "price": 55000000
       },
       {
         "name": "Infinity Hat",
@@ -335,7 +335,7 @@
       },
       {
         "name": "Infinity Top",
-        "price": 65000000
+        "price": 55000000
       },
       {
         "name": "Infinity Bottom",
@@ -371,7 +371,7 @@
       },
       {
         "name": "Master Wand",
-        "price": 43000000
+        "price":
       },
       {
         "name": "Beginner Wand to Master",
@@ -386,23 +386,23 @@
       "nmz",
       "nightmarezone"
     ],
-    "caption": "Prices below are per 1m points",
+    "caption": "Prices are per 1M points \nFor A Custom Ask Create A Ticket",
     "items": [
       {
         "name": "60-80 combat skill levels with ds2 done",
-        "price": 2500000
+        "price": 2000000
       },
       {
         "name": "80-99 combat skill levels with ds2 done",
-        "price": 15000000
+        "price": 10000000
       },
       {
         "name": "60-80 combat skill levels without ds2",
-        "price": 40000000
+        "price": 350000000
       },
       {
         "name": "80-99 combat skill levels without ds2",
-        "price": 30000000
+        "price": 35000000
       }
     ]
   },
@@ -413,8 +413,8 @@
       "pc",
       "pestcontrol"
     ],
-    "caption": "Prices below are per point",
-    "items": [
+    "caption": "Prices are per points\nFor A Custom Ask Create A Ticketr point",
+   "items": [
       {
         "name": "Low",
         "price": 65000
@@ -436,7 +436,7 @@
       "pethunt"
     ],
     "emoji": "<:Abyssal_Sire:1332733623484420179>",
-    "caption": "Create a ticket and we will quote prices for you"
+    "caption": "Create a ticket and discuss"
   },
   {
     "name": "Pyramid Plunder",
@@ -448,7 +448,7 @@
     "items": [
       {
         "name": "Pharoah's Sceptre",
-        "price": 55000000
+        "price": 80000000
       }
     ]
   },
@@ -459,19 +459,19 @@
       "sw",
       "soulwars"
     ],
-    "caption": "Prices below are per point",
+    "caption": "Prices are per point",
     "items": [
       {
         "name": "1-500",
-        "price": 70000
+        "price": 75000
       },
       {
         "name": "500-2500",
-        "price": 60000
+        "price": 65000
       },
       {
         "name": "2500+",
-        "price": 50000
+        "price": 55000
       }
     ]
   },
@@ -482,7 +482,7 @@
       "Tithe farm",
       "Tithe"
     ],
-    "caption": "",
+    "caption": "For A Custom Ask Create A Ticket.",
     "items": [
       {
         "name": "Farming outfit",
@@ -512,19 +512,19 @@
     "items": [
       {
         "name": "None to Rune defender",
-        "price": 20000000
+        "price": 25000000
       },
       {
         "name": "None to Dragon",
-        "price": 30000000
+        "price": 35000000
       },
       {
         "name": "Extra Dragon Defenders",
-        "price": 5000000
+        "price": 5500000
       },
       {
         "name": "100 Warrior guild tokens",
-        "price": 250000
+        "price": 300000
       }
     ]
   }
