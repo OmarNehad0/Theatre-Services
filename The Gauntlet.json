@@ -4,11 +4,11 @@
       "aliases": [
         "gauntlet"
       ],
-      "caption": "+200k If no piety \n+200k if no cox scrolls",
+      "caption": "+150K If no piety",
       "items": [
         {
           "name": "Normal - 70+",
-          "price": 2000000,
+          "price": 1500000,
           "image" : "https://oldschool.runescape.wiki/images/thumb/Youngllef_%28follower%29.png/280px-Youngllef_%28follower%29.png?fc90e"
         }
       ],
@@ -19,21 +19,21 @@
       "aliases": [
         "cg"
       ],
-      "caption": "+200k If no piety \n +200k if no cox scrolls",
+      "caption": "+150k If no piety",
       "items": [
         {
           "name": "Stats 99",
-          "price": 2900000,
+          "price": 3000000,
           "image" : "https://oldschool.runescape.wiki/images/thumb/Corrupted_Youngllef.png/1024px-Corrupted_Youngllef.png?fc90e"
         },
         {
           "name": "Stats 95+",
-          "price": 3200000,
+          "price": 3300000,
           "image" : "https://oldschool.runescape.wiki/images/thumb/Corrupted_Youngllef.png/1024px-Corrupted_Youngllef.png?fc90e"
         },
         {
           "name": "Stats 90+",
-          "price": 3600000,
+          "price": 3700000,
           "image" : "https://oldschool.runescape.wiki/images/thumb/Corrupted_Youngllef.png/1024px-Corrupted_Youngllef.png?fc90e"
         },
         {
@@ -43,12 +43,12 @@
         },
         {
           "name": "Stats 80+",
-          "price": 4200000,
+          "price": 4300000,
           "image" : "https://oldschool.runescape.wiki/images/thumb/Corrupted_Youngllef.png/1024px-Corrupted_Youngllef.png?fc90e"
         },
         {
           "name": "Stats 75+",
-          "price": 4700000,
+          "price": 4800000,
           "image" : "https://oldschool.runescape.wiki/images/thumb/Corrupted_Youngllef.png/1024px-Corrupted_Youngllef.png?fc90e"
         }],
      "emoji" : "<:280pxCorrupted_Hunllef:1222390344377696288>"
