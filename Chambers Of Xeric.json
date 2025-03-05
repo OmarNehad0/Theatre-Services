@@ -4,7 +4,7 @@
         "aliases": [
             "coxtrio"
         ],
-        "caption": "You keep all loot.\nPrices may vary depending on stats and gear",
+        "caption": "For A Custom Ask Create A Ticket.",
         "items": [
             {
                 "name": "Trio",
@@ -19,16 +19,16 @@
         "aliases": [
             "coxcm"
         ],
-        "caption": "You keep all loot.\nPrices may vary depending on stats and gear",
+        "caption": "For A Custom Ask Create A Ticket.",
         "items": [
             {
                 "name": "Challenge Mode - Mass",
-                "price": 20000000,
+                "price": 18000000,
                 "image": "https://oldschool.runescape.wiki/images/thumb/Great_Olm_%28Christmas%29.png/800px-Great_Olm_%28Christmas%29.png?48b39"
             },
             {
                 "name": "Challenge Mode - 3-5",
-                "price": 25000000,
+                "price": 20000000,
                 "image": "https://oldschool.runescape.wiki/images/thumb/Great_Olm_%28Christmas%29.png/800px-Great_Olm_%28Christmas%29.png?48b39"
             }
         ],
@@ -39,7 +39,7 @@
         "aliases": [
             "coxsolo"
         ],
-        "caption": "You keep all loot.\nPrices may vary depending on stats and gear",
+        "caption": "You will get full points per raid.",
         "items": [
             {
                 "name": "Twisted Bow (TBow)",
@@ -47,13 +47,13 @@
                 "image": "https://oldschool.runescape.wiki/images/thumb/Great_Olm_%28Christmas%29.png/800px-Great_Olm_%28Christmas%29.png?48b39"
             },
             {
-                "name": "Bow of Faerdhinen (Bowfa)",
-                "price": 12000000,
+                "name": "Bow of Faerdhinen (Bowfa/lance/dwh)",
+                "price": 15000000,
                 "image": "https://oldschool.runescape.wiki/images/thumb/Great_Olm_%28Christmas%29.png/800px-Great_Olm_%28Christmas%29.png?48b39"
             },
             {
                 "name": "Tentacle Whip/Toxic Blowpipe (BP)",
-                "price": 15000000,
+                "price": 18000000,
                 "image": "https://oldschool.runescape.wiki/images/thumb/Great_Olm_%28Christmas%29.png/800px-Great_Olm_%28Christmas%29.png?48b39"
             }
         ],
