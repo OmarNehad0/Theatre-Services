@@ -199,12 +199,7 @@ async def wallet_add_remove(interaction: discord.Interaction, user: discord.Memb
 
     # Action handling
     if action == "remove":
-        if wallet_value < value:
-            await interaction.response.send_message("⚠ Insufficient balance to remove!", ephemeral=True)
-            return
         update_wallet(user_id, "wallet", -value)
-    else:
-        update_wallet(user_id, "wallet", value)
 
     # Fetch updated values
     updated_wallet = get_wallet(user_id) or {"wallet": 0, "deposit": 0, "spent": 0}
@@ -1142,7 +1137,7 @@ class BossSelectView(View):
 @bot.command()
 async def start(ctx):
     # Direct URL to the banner image
-    banner_url = "https://media.discordapp.net/attachments/1344140486188994590/1345278377455783957/banner.gif?ex=67c894df&is=67c7435f&hm=c0deff7461ce80faa6f73d4dede6a89dd158c1adfee4b97905c70e88476fcd30&=&width=550&height=310"
+    banner_url = "https://s6.ezgif.com/tmp/ezgif-6fd1100e2a89c.gif"
     import io
 
     # Download and send the banner image
