@@ -433,7 +433,6 @@ async def post(interaction: discord.Interaction, customer: discord.Member, value
         })
 
         confirmation_embed = embed.copy()
-        confirmation_embed.title = "Order Posted"
         await interaction.channel.send(embed=confirmation_embed)
         await interaction.response.send_message("Order posted successfully!", ephemeral=True)
         await log_command(interaction, "Order Posted", f"Customer: {customer.mention} (`{customer.id}`)\nValue: {value:,}M\nDeposit Required: {deposit_required:,}M\nHolder: {holder.mention} (`{holder.id}`)\nChannel: {channel.mention}\nDescription: {description}")
