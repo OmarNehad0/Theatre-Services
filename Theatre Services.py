@@ -425,6 +425,7 @@ async def post(interaction: discord.Interaction, customer: discord.Member, value
         orders_collection.insert_one({
             "_id": order_id,
             "customer": customer.id,
+            "posted_by": interaction.user.id,
             "worker": None,
             "value": value,
             "deposit_required": deposit_required,
@@ -432,8 +433,7 @@ async def post(interaction: discord.Interaction, customer: discord.Member, value
             "message_id": message.id,
             "channel_id": channel.id,
             "original_channel_id": post_channel_id,  # Store where /post was used
-            "description": description,
-            "posted_by": interaction.user.id  # track who posted the order
+            "description": description
         })
 
         confirmation_embed = embed.copy()
