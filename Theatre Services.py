@@ -177,48 +177,45 @@ async def wallet(interaction: discord.Interaction, user: discord.Member = None):
 
 
 
-# /wallet_add_remove command
 @bot.tree.command(name="wallet_add_remove", description="Add or remove value from a user's wallet")
 @app_commands.choices(action=[
     discord.app_commands.Choice(name="Add", value="add"),
     discord.app_commands.Choice(name="Remove", value="remove")
 ])
-async def wallet_add_remove(interaction: discord.Interaction, user: discord.Member, action: str, value: float):  
+async def wallet_add_remove(
+    interaction: discord.Interaction,
+    user: discord.Member,
+    action: discord.app_commands.Choice[str],
+    value: float
+):  
     if not has_permission(interaction.user):
         await interaction.response.send_message("❌ You don't have permission to use this command.", ephemeral=True)
         return
+
     user_id = str(user.id)
-    
-    # Fetch wallet data or default to zero if not found
     wallet_data = get_wallet(user_id) or {"wallet": 0, "deposit": 0, "spent": 0}
-    
-    # Get individual values with defaults
-    wallet_value = wallet_data.get("wallet", 0)
-    deposit_value = wallet_data.get("deposit", 0)
-    spent_value = wallet_data.get("spent", 0)
 
-    # Action handling
-    if action == "remove":
+    if action.value == "remove":
         update_wallet(user_id, "wallet", -value)
+    else:
+        update_wallet(user_id, "wallet", value)
 
-    # Fetch updated values
     updated_wallet = get_wallet(user_id) or {"wallet": 0, "deposit": 0, "spent": 0}
     wallet_value = updated_wallet.get("wallet", 0)
     deposit_value = updated_wallet.get("deposit", 0)
     spent_value = updated_wallet.get("spent", 0)
 
-    # Embed with modern design
     embed = discord.Embed(title=f"{user.display_name}'s Wallet 💳", color=discord.Color.blue())
     embed.set_thumbnail(url=user.avatar.url if user.avatar else user.default_avatar.url)
-
     embed.add_field(name="📥 Deposit", value=f"```💵 {deposit_value:,}M```", inline=False)
     embed.add_field(name="💰 Wallet", value=f"```💰 {wallet_value:,}M```", inline=False)
     embed.add_field(name="💸 Spent", value=f"```🛍️ {spent_value:,}M```", inline=False)
     embed.set_image(url="https://media.discordapp.net/attachments/1344265853100621914/1345117130403610696/banner.gif?ex=67c36172&is=67c20ff2&hm=5d727bb56b2eb2f48b46bc56efc9f0ab185303a870b74e463dd563a73f4c269c&=")
     embed.set_footer(text=f"Requested by {interaction.user.display_name}", icon_url=interaction.user.avatar.url)
     
-    await interaction.response.send_message(f"✅ {action.capitalize()}ed {value:,}M.", embed=embed)
-    await log_command(interaction, "wallet_add_remove", f"User: {user.mention} | Action: {action} | Value: {value:,}M")
+    await interaction.response.send_message(f"✅ {action.name}ed {value:,}M.", embed=embed)
+    await log_command(interaction, "wallet_add_remove", f"User: {user.mention} | Action: {action.name} | Value: {value:,}M")
+
 
 @bot.tree.command(name="deposit", description="Set or remove a user's deposit value")
 @app_commands.choices(action=[
