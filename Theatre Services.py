@@ -474,6 +474,7 @@ async def set_order(interaction: Interaction, customer: discord.Member, value: i
     orders_collection.insert_one({
         "_id": order_id,  # Use unique order ID
         "customer": customer.id,
+        "posted_by": interaction.user.id,
         "worker": worker.id,  # Directly assign worker
         "value": value,
         "deposit_required": deposit_required,
