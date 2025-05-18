@@ -399,9 +399,8 @@ async def post(interaction: discord.Interaction, customer: discord.Member, value
     else:
         role_ping = None  # No roles found, so no ping
 
-    embed = discord.Embed(title="New Order", color=0xffa500)
     embed.set_thumbnail(url="https://media.discordapp.net/attachments/1344265853100621914/1345088681924366406/avatar.gif?ex=67c346f4&is=67c1f574&hm=d84730a5eb8bd1b0a33d5d8783bef2faa3492f9f0fdce089ff79e7248d357e9b&=")
-    embed.set_author(name="🎭 Order Posted", icon_url="https://media.discordapp.net/attachments/1344265853100621914/1345088681924366406/avatar.gif?ex=67c346f4&is=67c1f574&hm=d84730a5eb8bd1b0a33d5d8783bef2faa3492f9f0fdce089ff79e7248d357e9b&=")
+    embed.set_author(name="🎭 New Order Posted", icon_url="https://media.discordapp.net/attachments/1344265853100621914/1345088681924366406/avatar.gif?ex=67c346f4&is=67c1f574&hm=d84730a5eb8bd1b0a33d5d8783bef2faa3492f9f0fdce089ff79e7248d357e9b&=")
     embed.add_field(name="Description", value=description, inline=False)
     embed.add_field(name="💵 Value", value=f"```{value}M```", inline=True)
     embed.add_field(name="💰 Deposit Required", value=f"```{deposit_required}M```", inline=True)
