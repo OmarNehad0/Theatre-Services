@@ -381,7 +381,7 @@ async def post(interaction: discord.Interaction, customer: discord.Member, value
     channel_id = channel.id
     order_id = get_next_order_id()
     post_channel_id = interaction.channel.id  # Store the channel where /post was used
-    "posted_by": interaction.user.id,  # track who posted the order
+
 
     # Define role IDs
     role1_id = 1343638843659653190
@@ -433,6 +433,7 @@ async def post(interaction: discord.Interaction, customer: discord.Member, value
             "channel_id": channel.id,
             "original_channel_id": post_channel_id,  # Store where /post was used
             "description": description
+            "posted_by": interaction.user.id,  # track who posted the order
         })
 
         confirmation_embed = embed.copy()
