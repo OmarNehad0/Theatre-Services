@@ -432,8 +432,8 @@ async def post(interaction: discord.Interaction, customer: discord.Member, value
             "message_id": message.id,
             "channel_id": channel.id,
             "original_channel_id": post_channel_id,  # Store where /post was used
-            "description": description
-            "posted_by": interaction.user.id,  # track who posted the order
+            "description": description,
+            "posted_by": interaction.user.id  # track who posted the order
         })
 
         confirmation_embed = embed.copy()
