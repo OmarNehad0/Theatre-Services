@@ -381,6 +381,7 @@ async def post(interaction: discord.Interaction, customer: discord.Member, value
     channel_id = channel.id
     order_id = get_next_order_id()
     post_channel_id = interaction.channel.id  # Store the channel where /post was used
+    "posted_by": interaction.user.id,  # track who posted the order
 
     # Define role IDs
     role1_id = 1343638843659653190
@@ -494,7 +495,6 @@ async def set_order(interaction: Interaction, customer: discord.Member, value: i
             print(f"Permissions granted to {worker.name} in {original_channel.name}.")
         except Exception as e:
             print(f"Failed to set permissions for {worker.name} in {original_channel.name}: {e}")
-# /complete command
 @bot.tree.command(name="complete", description="Mark an order as completed.")
 async def complete(interaction: Interaction, order_id: int):
     if not has_permission(interaction.user):
@@ -505,47 +505,60 @@ async def complete(interaction: Interaction, order_id: int):
     if not order:
         await interaction.response.send_message("Order not found!", ephemeral=True)
         return
-    
-    # Removed the worker check to allow permission roles to complete orders
-    # Now, as long as the user has permission, they can mark the order as completed
 
     # Transfer funds
     update_wallet(str(order["customer"]), "spent", order["value"])
-    worker_payment = round(order["value"] * 0.8, 1)  # Keeps one decimal place
-    update_wallet(str(order["worker"]), "wallet", float(worker_payment))  # Ensure it's stored as float
-    orders_collection.update_one({"_id": order_id}, {"$set": {"status": "completed"}})
     
+    total_value = order["value"]
+    worker_payment = round(total_value * 0.80, 1)
+    commission_value = round(total_value * 0.15, 1)
+    helper_payment = round(total_value * 0.05, 1)
+
+    update_wallet(str(order["worker"]), "wallet", float(worker_payment))
+    update_wallet("server", "commission", float(commission_value))
+    update_wallet(str(order.get("posted_by", interaction.user.id)), "wallet", float(helper_payment))
+
+    orders_collection.update_one({"_id": order_id}, {"$set": {"status": "completed"}})
+
     # Notify the original channel
     original_channel = bot.get_channel(order["original_channel_id"])
     if original_channel:
         embed = Embed(title="✅ Order Completed", color=discord.Color.blue())
-        embed.set_thumbnail(url="https://media.discordapp.net/attachments/1344265853100621914/1345088681924366406/avatar.gif?ex=67c346f4&is=67c1f574&hm=d84730a5eb8bd1b0a33d5d8783bef2faa3492f9f0fdce089ff79e7248d357e9b&=")
-        embed.set_author(name="Anas System", icon_url="https://media.discordapp.net/attachments/1344265853100621914/1345088681924366406/avatar.gif?ex=67c346f4&is=67c1f574&hm=d84730a5eb8bd1b0a33d5d8783bef2faa3492f9f0fdce089ff79e7248d357e9b&=")
+        embed.set_thumbnail(url="https://media.discordapp.net/attachments/1344265853100621914/1345088681924366406/avatar.gif")
+        embed.set_author(name="Anas System", icon_url="https://media.discordapp.net/attachments/1344265853100621914/1345088681924366406/avatar.gif")
         embed.add_field(name="Description", value=order.get("description", "No description provided."), inline=False)
         embed.add_field(name="👷 Worker", value=f"<@{order['worker']}>", inline=True)
         embed.add_field(name="📌 Customer", value=f"<@{order['customer']}>", inline=True)
-        embed.add_field(name="💰 Value", value=f"```{order['value']}M```", inline=True)
+        embed.add_field(name="💰 Value", value=f"```{total_value}M```", inline=True)
         embed.add_field(name="💵 Worker Payment", value=f"```{worker_payment}M```", inline=True)
-        embed.set_image(url="https://media.discordapp.net/attachments/1344265853100621914/1345117130403610696/banner.gif?ex=67c36172&is=67c20ff2&hm=5d727bb56b2eb2f48b46bc56efc9f0ab185303a870b74e463dd563a73f4c269c&=")
-        embed.set_footer(text=f"Order ID: {order_id}", icon_url="https://media.discordapp.net/attachments/1344265853100621914/1345088681924366406/avatar.gif?ex=67c346f4&is=67c1f574&hm=d84730a5eb8bd1b0a33d5d8783bef2faa3492f9f0fdce089ff79e7248d357e9b&=")
+        embed.add_field(name="📦 Server Commission", value=f"```{commission_value}M```", inline=True)
+        embed.add_field(name="📬 Helper Reward", value=f"```{helper_payment}M```", inline=True)
+        embed.set_image(url="https://media.discordapp.net/attachments/1344265853100621914/1345117130403610696/banner.gif")
+        embed.set_footer(text=f"Order ID: {order_id}", icon_url="https://media.discordapp.net/attachments/1344265853100621914/1345088681924366406/avatar.gif")
         await original_channel.send(embed=embed)
-    
+
     # DM the worker
     worker = bot.get_user(order["worker"])
     if worker:
         dm_embed = Embed(title="✅ Order Completed", color=discord.Color.blue())
-        dm_embed.set_thumbnail(url="https://media.discordapp.net/attachments/1344265853100621914/1345088681924366406/avatar.gif?ex=67c346f4&is=67c1f574&hm=d84730a5eb8bd1b0a33d5d8783bef2faa3492f9f0fdce089ff79e7248d357e9b&=")
-        dm_embed.set_author(name="Anas System", icon_url="https://media.discordapp.net/attachments/1344265853100621914/1345088681924366406/avatar.gif?ex=67c346f4&is=67c1f574&hm=d84730a5eb8bd1b0a33d5d8783bef2faa3492f9f0fdce089ff79e7248d357e9b&=")
+        dm_embed.set_thumbnail(url="https://media.discordapp.net/attachments/1344265853100621914/1345088681924366406/avatar.gif")
+        dm_embed.set_author(name="Anas System", icon_url="https://media.discordapp.net/attachments/1344265853100621914/1345088681924366406/avatar.gif")
         dm_embed.add_field(name="Description", value=order.get("description", "No description provided."), inline=False)
         dm_embed.add_field(name="📌 Customer", value=f"<@{order['customer']}>", inline=True)
-        dm_embed.add_field(name="💰 Value", value=f"```{order['value']}M```", inline=True)
+        dm_embed.add_field(name="💰 Value", value=f"```{total_value}M```", inline=True)
         dm_embed.add_field(name="💵 Your Payment", value=f"```{worker_payment}M```", inline=True)
-        dm_embed.set_image(url="https://media.discordapp.net/attachments/1344265853100621914/1345117130403610696/banner.gif?ex=67c36172&is=67c20ff2&hm=5d727bb56b2eb2f48b46bc56efc9f0ab185303a870b74e463dd563a73f4c269c&=")
-        dm_embed.set_footer(text=f"Order ID: {order_id}", icon_url="https://media.discordapp.net/attachments/1344265853100621914/1345088681924366406/avatar.gif?ex=67c346f4&is=67c1f574&hm=d84730a5eb8bd1b0a33d5d8783bef2faa3492f9f0fdce089ff79e7248d357e9b&=")
+        dm_embed.set_image(url="https://media.discordapp.net/attachments/1344265853100621914/1345117130403610696/banner.gif")
+        dm_embed.set_footer(text=f"Order ID: {order_id}", icon_url="https://media.discordapp.net/attachments/1344265853100621914/1345088681924366406/avatar.gif")
         await worker.send(embed=dm_embed)
-    
+
     await interaction.response.send_message("Order marked as completed!", ephemeral=True)
-    await log_command(interaction, "Order Completed", f"Order ID: {order_id}\nMarked by: {interaction.user.mention} (`{interaction.user.id}`)\nWorker: <@{order['worker']}> (`{order['worker']}`)\nCustomer: <@{order['customer']}> (`{order['customer']}`)\nValue: {order['value']}M\nWorker Payment: {worker_payment}M")
+    await log_command(interaction, "Order Completed", (
+        f"Order ID: {order_id}\nMarked by: {interaction.user.mention} (`{interaction.user.id}`)\n"
+        f"Worker: <@{order['worker']}> (`{order['worker']}`)\n"
+        f"Customer: <@{order['customer']}> (`{order['customer']}`)\n"
+        f"Value: {total_value}M\nWorker Payment: {worker_payment}M\n"
+        f"Server Commission: {commission_value}M\nHelper Reward: {helper_payment}M"
+    ))
 
 # 📌 /order_deletion command
 @bot.tree.command(name="order_deletion", description="Delete an order.")
