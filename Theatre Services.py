@@ -23,6 +23,8 @@ from discord import Embed, Interaction
 from pymongo import MongoClient, ReturnDocument
 from collections import defaultdict
 import re
+import difflib
+
 # Define intents
 intents = discord.Intents.default()
 intents.message_content = True
