@@ -22,7 +22,7 @@ import gspread
 from discord import Embed, Interaction
 from pymongo import MongoClient, ReturnDocument
 from collections import defaultdict
-
+import re
 # Define intents
 intents = discord.Intents.default()
 intents.message_content = True
@@ -1161,7 +1161,7 @@ class BossSelectView(View):
 @bot.command()
 async def start(ctx):
     # Direct URL to the banner image
-    banner_url = "https://s6.ezgif.com/tmp/ezgif-6fd1100e2a89c.gif"
+    banner_url = "https://media.discordapp.net/attachments/1344265853100621914/1345088735787745474/server_banner.gif?ex=68315c41&is=68300ac1&hm=937770f920c99b2a03af0527f89e1681970db623f7d87dcad52b2cb081f3d3f5&=&width=550&height=309"
     import io
 
     # Download and send the banner image
