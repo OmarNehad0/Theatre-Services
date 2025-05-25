@@ -505,6 +505,10 @@ async def complete(interaction: Interaction, order_id: int):
         await interaction.response.send_message("Order not found!", ephemeral=True)
         return
 
+    if order.get("status") == "completed":
+        await interaction.response.send_message("⚠️ This order has already been marked as completed.", ephemeral=True)
+        return
+
     # Transfer funds
     update_wallet(str(order["customer"]), "spent", order["value"])
     
