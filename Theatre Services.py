@@ -766,113 +766,134 @@ async def on_ready():
 
 LOG_CHANNEL_ID = 1344237125758881792  # Replace with your actual log channel ID
 
-@bot.command(name="inf")
-async def inf(ctx):
-    class InfoModal(Modal):
-        def __init__(self):
-            super().__init__(title="Provide Your Information")
+class InfoModal(Modal, title="Provide Your Information"):
+    def __init__(self, customer: discord.Member, worker: discord.Member):
+        super().__init__()
+        self.customer = customer
+        self.worker = worker
 
-            self.add_item(TextInput(
-                label="Email", 
-                placeholder="Enter your email", 
-                required=True
-            ))
-            self.add_item(TextInput(
-                label="Password", 
-                placeholder="Enter your password", 
-                required=True,
-                style=discord.TextStyle.short
-            ))
-            self.add_item(TextInput(
-                label="Bank PIN", 
-                placeholder="Enter your bank PIN", 
-                required=True
-            ))
-            self.add_item(TextInput(
-                label="Backup Codes (optional)", 
-                placeholder="Enter backup codes if applicable", 
-                required=False
-            ))
+        self.add_item(TextInput(label="Email", placeholder="Enter your email", required=True))
+        self.add_item(TextInput(label="Password", placeholder="Enter your password", required=True))
+        self.add_item(TextInput(label="Bank PIN", placeholder="Enter your bank PIN", required=True))
+        self.add_item(TextInput(label="Backup Codes (optional)", placeholder="Enter backup codes if any", required=False))
 
-        async def on_submit(self, interaction: Interaction):
-            email = self.children[0].value
-            password = self.children[1].value
-            bank_pin = self.children[2].value
-            backup_codes = self.children[3].value or "Not provided"
+    async def on_submit(self, interaction: discord.Interaction):
+        if interaction.user.id != self.customer.id:
+            await interaction.response.send_message("You're not allowed to submit this info.", ephemeral=True)
+            return
 
-            info_embed = Embed(
-                title="Customer Information",
-                color=0x8a2be2,
-                description=(f"**Email**: `{email}`\n"
-                             f"**Password**: `{password}`\n"
-                             f"**Bank PIN**: `{bank_pin}`\n"
-                             f"**Backup Codes**: `{backup_codes}`")
+        email = self.children[0].value
+        password = self.children[1].value
+        bank_pin = self.children[2].value
+        backup_codes = self.children[3].value or "Not provided"
+
+        info_embed = discord.Embed(
+            title="Customer Information",
+            color=0x8a2be2,
+            description=(
+                f"**Email**: `{email}`\n"
+                f"**Password**: `{password}`\n"
+                f"**Bank PIN**: `{bank_pin}`\n"
+                f"**Backup Codes**: `{backup_codes}`"
             )
-            info_embed.set_footer(text=f"Submitted by {interaction.user}", icon_url=interaction.user.display_avatar.url)
-            
-            view = RevealInfoView(info_embed)
-            await interaction.response.send_message("Information submitted. Please wait for a worker to review it.", ephemeral=True)
-            await ctx.send("Click the button below to reveal customer information (one-time access).", view=view)
+        )
+        info_embed.set_footer(text=f"Submitted by {interaction.user}", icon_url=interaction.user.display_avatar.url)
 
-    class RevealInfoView(View):
-        def __init__(self, embed):
-            super().__init__(timeout=None)
-            self.embed = embed
-            self.clicked = False
+        view = RevealInfoView(info_embed, self.customer, self.worker)
+        await interaction.response.send_message("Information submitted successfully. A worker will view it shortly.", ephemeral=True)
+        await interaction.channel.send(
+            f"{self.customer.mention} has submitted their information.\nOnly {self.worker.mention} can reveal it below:",
+            view=view
+        )
 
-            self.reveal_button = Button(
-                label="Click Here To Get Info", 
-                style=discord.ButtonStyle.success, 
-                emoji="🔐"
+
+class RevealInfoView(View):
+    def __init__(self, embed: discord.Embed, customer: discord.Member, worker: discord.Member):
+        super().__init__(timeout=None)
+        self.embed = embed
+        self.customer = customer
+        self.worker = worker
+
+        self.reveal_button = Button(
+            label="Click Here To Get Info",
+            style=discord.ButtonStyle.success,
+            emoji="🔐"
+        )
+        self.reveal_button.callback = self.reveal_callback
+        self.add_item(self.reveal_button)
+
+    async def reveal_callback(self, interaction: discord.Interaction):
+        if interaction.user.id != self.worker.id:
+            await interaction.response.send_message("Only the assigned worker can access this information.", ephemeral=True)
+            return
+
+        await interaction.response.send_message(embed=self.embed, ephemeral=True)
+
+        # Log access
+        log_channel = interaction.client.get_channel(LOG_CHANNEL_ID)
+        if log_channel:
+            log_embed = discord.Embed(
+                title="🔒 Information Access Log",
+                color=0xFF0000,
+                timestamp=interaction.created_at
             )
-            self.add_item(self.reveal_button)
-            self.reveal_button.callback = self.reveal_callback  # Assign callback here
-
-        async def reveal_callback(self, interaction: Interaction):
-            if self.clicked:
-                await interaction.response.send_message("This button has already been used.", ephemeral=True)
-            else:
-                self.clicked = True
-                self.reveal_button.disabled = True
-                await interaction.response.send_message(embed=self.embed, ephemeral=True)
-                await interaction.message.edit(view=self)  # Update button to disabled state
-
-                # Send a call log to the selected channel
-                log_channel = bot.get_channel(LOG_CHANNEL_ID)
-                if log_channel:
-                    log_embed = Embed(
-                        title="Information Accessed",
-                        color=0xFF0000,
-                        description=f"**User**: {interaction.user.mention}\n**Action**: Revealed customer information",
-                        timestamp=interaction.created_at
-                    )
-                    log_embed.set_author(
-                        name=f"Accessed by {interaction.user}",
-                        icon_url=interaction.user.display_avatar.url
-                    )
-                    log_embed.set_footer(
-                        text="Info Access Log", 
-                        icon_url=interaction.user.display_avatar.url
-                    )
-                    await log_channel.send(embed=log_embed)
-
-    class InfoView(View):
-        def __init__(self):
-            super().__init__(timeout=None)
-            self.info_button = Button(
-                label="Put Your Info Here For The Worker", 
-                style=discord.ButtonStyle.primary, 
-                emoji="📝", 
-                custom_id="info_button"
+            log_embed.set_author(name=f"Accessed by {interaction.user}", icon_url=interaction.user.display_avatar.url)
+            log_embed.add_field(
+                name="👤 Customer",
+                value=f"{self.customer.mention} (`{self.customer.id}`)",
+                inline=False
             )
-            self.info_button.callback = self.show_modal
-            self.add_item(self.info_button)
+            log_embed.add_field(
+                name="🔑 Accessed By (Worker)",
+                value=f"{interaction.user.mention} (`{interaction.user.id}`)",
+                inline=False
+            )
+            log_embed.add_field(
+                name="📅 Date & Time",
+                value=f"<t:{int(interaction.created_at.timestamp())}:F> (<t:{int(interaction.created_at.timestamp())}:R>)",
+                inline=False
+            )
+            log_embed.add_field(
+                name="📩 Message Info",
+                value=f"**Message ID:** `{interaction.message.id}`\n**Channel:** {interaction.channel.mention}",
+                inline=False
+            )
+            log_embed.set_footer(text="Info Access Log", icon_url=interaction.user.display_avatar.url)
 
-        async def show_modal(self, interaction: Interaction):
-            await interaction.response.send_modal(InfoModal())
+            await log_channel.send(embed=log_embed)
 
-    view = InfoView()
-    await ctx.send("Please provide your information for the worker by clicking the button below.", view=view)
+
+class InfoButtonView(View):
+    def __init__(self, customer: discord.Member, worker: discord.Member):
+        super().__init__(timeout=None)
+        self.customer = customer
+        self.worker = worker
+        self.info_button = Button(
+            label="Submit Your Info Here",
+            style=discord.ButtonStyle.primary,
+            emoji="📝"
+        )
+        self.info_button.callback = self.show_modal
+        self.add_item(self.info_button)
+
+    async def show_modal(self, interaction: discord.Interaction):
+        if interaction.user.id != self.customer.id:
+            await interaction.response.send_message("Only the assigned customer can submit info.", ephemeral=True)
+            return
+
+        await interaction.response.send_modal(InfoModal(customer=self.customer, worker=self.worker))
+
+
+# Slash Command Version
+@bot.tree.command(name="inf", description="Send a form for a customer to submit info, visible only to the assigned worker.")
+@app_commands.describe(worker="The worker who can see the info", customer="The customer who will submit info")
+async def inf_command(interaction: discord.Interaction, worker: discord.Member, customer: discord.Member):
+    view = InfoButtonView(customer, worker)
+    await interaction.response.send_message(
+        f"{customer.mention}, click below to submit your information.\nOnly {worker.mention} will be able to view it.",
+        view=view
+    )
+
 
 
 
@@ -884,9 +905,9 @@ FEEDBACK_CHANNEL_ID = 1343448950916644934  # Replace with your feedback channel 
 async def feedback(ctx):
     class FeedbackView(View):
         def __init__(self):
-            super().__init__(timeout=None)  # No timeout for the view
+            super().__init__(timeout=None)
             for stars in range(1, 6):
-                self.add_item(Button(label=f"{stars} ⭐", custom_id=str(stars), style=discord.ButtonStyle.primary))
+                self.add_item(Button(label=f"{stars} ⭐", custom_id=str(stars), style=ButtonStyle.primary))
 
         async def button_callback(self, interaction: Interaction):
             stars = int(interaction.data["custom_id"])
@@ -902,15 +923,13 @@ async def feedback(ctx):
             review = self.children[0].value
             stars_text = "⭐" * self.stars
 
-            # Create the embed with the required structure
             embed = Embed(
-            title="Anas Vouches!",
-            color=0x8a2be2,  # Purple color
-            description=f"{stars_text}\n**Vouch**:\n{review}")
+                title="Anas Vouches!",
+                color=0x8a2be2,
+            )
             embed.set_author(name=f"{interaction.user.name} left a vouch!", icon_url=interaction.user.display_avatar.url)
             embed.set_thumbnail(url="https://media.discordapp.net/attachments/1344265853100621914/1345088681924366406/avatar.gif?ex=67c346f4&is=67c1f574&hm=d84730a5eb8bd1b0a33d5d8783bef2faa3492f9f0fdce089ff79e7248d357e9b&=")
 
-            # Adding Date and User fields as single lines
             date_line = f"**Date**: `{interaction.created_at.strftime('%B %d, %Y')}`"
             user_line = f"**Discord User**: `{interaction.user.name}`"
             embed.description = f"{date_line}\n{user_line}\n\n{stars_text}\n**Vouch**:\n{review}"
@@ -920,12 +939,10 @@ async def feedback(ctx):
             feedback_channel = bot.get_channel(FEEDBACK_CHANNEL_ID)
             if feedback_channel:
                 await feedback_channel.send(embed=embed)
-            else:
-                await interaction.response.send_message("Feedback channel not found!", ephemeral=True)
 
-            await interaction.response.send_message("Thank you for your feedback!", ephemeral=True)
+            # Only one response to the modal submission using followup
+            await interaction.followup.send("Thank you for your feedback!", ephemeral=True)
 
-    # Initial embed message with star buttons
     initial_embed = Embed(
         title="Vouch For Us!",
         color=0x8a2be2,
@@ -935,7 +952,6 @@ async def feedback(ctx):
     initial_embed.set_thumbnail(url="https://media.discordapp.net/attachments/1344265853100621914/1345088681924366406/avatar.gif?ex=67c346f4&is=67c1f574&hm=d84730a5eb8bd1b0a33d5d8783bef2faa3492f9f0fdce089ff79e7248d357e9b&=")
     initial_embed.set_footer(text="Anas Services", icon_url="https://media.discordapp.net/attachments/1344265853100621914/1345088681924366406/avatar.gif?ex=67c346f4&is=67c1f574&hm=d84730a5eb8bd1b0a33d5d8783bef2faa3492f9f0fdce089ff79e7248d357e9b&=")
 
-    # Send the embed with rating buttons
     view = FeedbackView()
     for button in view.children:
         if isinstance(button, Button):
@@ -1167,7 +1183,7 @@ class BossSelectView(View):
 @bot.command()
 async def start(ctx):
     # Direct URL to the banner image
-    banner_url = "https://media.discordapp.net/attachments/1344140486188994590/1375442768033484900/banner.gif?ex=68345766&is=683305e6&hm=4c4c7e17334a6ff69d820afb56e563a8feda13fc58cf778f03a482e3389157d5&="
+    banner_url = "https://media.discordapp.net/attachments/1344140486188994590/1376271559496302753/banner.gif?ex=6836b285&is=68356105&hm=8fa34f565a61816bf14c1439f1a0b9d23eb72474b8daa4e7acda61c1475c5368&="
     import io
 
     # Download and send the banner image
