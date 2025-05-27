@@ -941,7 +941,7 @@ async def feedback(ctx):
                 await feedback_channel.send(embed=embed)
 
             # Only one response to the modal submission using followup
-            await interaction.followup.send("Thank you for your feedback!", ephemeral=True)
+            await interaction.response.send_message("Thank you for your feedback!", ephemeral=True)
 
     initial_embed = Embed(
         title="Vouch For Us!",
