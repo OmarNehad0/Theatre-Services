@@ -19,7 +19,7 @@ import aiohttp
 from discord.ui import View, Button, Modal, TextInput
 import pymongo
 import gspread
-from discord import Embed, Interaction
+from discord import Embed, Interaction, ButtonStyle
 from pymongo import MongoClient, ReturnDocument
 from collections import defaultdict
 import re
